@@ -1,0 +1,30 @@
+{
+  "name": "dny.wtf",
+  "version": "0.0.0",
+  "description": "Unofficial dny.wtf wrapper",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SpeckyYT/dny.wtf.git"
+  },
+  "keywords": [
+    "api",
+    "images",
+    "upload",
+    "dny",
+    "wtf"
+  ],
+  "author": "SpeckyYT",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/SpeckyYT/dny.wtf/issues"
+  },
+  "homepage": "https://github.com/SpeckyYT/dny.wtf#readme",
+  "dependencies": {
+    "form-data": "^3.0.0",
+    "node-fetch": "^2.6.1"
+  }
+}
