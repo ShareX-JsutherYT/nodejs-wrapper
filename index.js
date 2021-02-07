@@ -1,5 +1,6 @@
 const fetch = require('node-fetch');
 const { format } = require('url');
+const { promisify } = require('util');
 const FormData = require('form-data');
 
 const apiDomain = 'api.dny.wtf';
@@ -13,11 +14,18 @@ class DNYWTF {
         this.randomdomain = randomdomain || false;
         this.showlink = showlink || false;
     }
-    upload({image}){
+    async upload({image}){
         const form = new FormData();
 
         if(image instanceof Buffer)
-            form.append('file', image.toString('binary'));
+            form.append(
+                'file',
+                image.toString('binary'),
+                {
+                    filename: 'file',
+                    contentType: 'image/png',
+                }
+            );
 
         return fetch(
             format({
