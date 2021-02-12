@@ -7,12 +7,13 @@ const apiDomain = 'api.dny.wtf';
 const apiProtocol = 'https';
 
 class DNYWTF {
-    constructor({ key, invisibleurl, randomdomain, showlink, domain }){
+    constructor({ key, invisibleurl, randomdomain, showlink, longurl, domain }){
         this.key = key;
         this.domain = domain;
         this.invisibleurl = invisibleurl || false;
         this.randomdomain = randomdomain || false;
         this.showlink = showlink || false;
+        this.longurl = longurl || false;
     }
     async upload({image}){
         const form = new FormData();
@@ -43,6 +44,25 @@ class DNYWTF {
                     domain: this.domain,
                 },
                 body: form,
+            }
+        )
+        .then(res => res.json());
+    }
+    async shortener({ url, longurl, domain }){
+        return fetch(
+            format({
+                protocol: apiProtocol,
+                host: apiDomain,
+                pathname: 'shortener',
+            }),
+            {
+                method: 'POST',
+                headers: {
+                    key: this.key,
+                    longurl: this.longurl,
+                    domain: this.domain,
+                },
+                body: JSON.stringify({url: url}),
             }
         )
         .then(res => res.json());
