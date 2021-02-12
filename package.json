@@ -1,6 +1,6 @@
 {
   "name": "dny.wtf",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Unofficial dny.wtf wrapper",
   "main": "index.js",
   "scripts": {
