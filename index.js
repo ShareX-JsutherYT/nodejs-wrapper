@@ -3,7 +3,7 @@ const { format } = require('url');
 const { promisify } = require('util');
 const FormData = require('form-data');
 
-const apiDomain = 'api.dny.wtf';
+const apiDomain = 'dny.wtf/api';
 const apiProtocol = 'https';
 
 class DNYWTF {
