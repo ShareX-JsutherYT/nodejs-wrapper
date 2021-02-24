@@ -1,15 +1,7 @@
-# dny.wtf
+# clippy.gg nodejs wrapper
 
-Unofficial wrapper for dny.wtf.
-
-## Installation
-
-```
-npm i --save dny.wtf
-```
+Official wrapper for  clippy.gg.
 
 ## Notes
 
-- Upload method doesn't work (sends a corrupted file/image)
-- Shortener method doesn't work (replies that no link was found)
-- Searching for 150IQ collaborators
+- This currently doesnt work lol
