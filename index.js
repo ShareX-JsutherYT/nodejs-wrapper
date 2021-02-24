@@ -3,10 +3,10 @@ const { format } = require('url');
 const { promisify } = require('util');
 const FormData = require('form-data');
 
-const apiDomain = 'dny.wtf/api';
+const apiDomain = 'api.clippy.gg';
 const apiProtocol = 'https';
 
-class DNYWTF {
+class Clippy {
     constructor({ key, invisibleurl, randomdomain, showlink, longurl, domain }){
         this.key = key;
         this.domain = domain;
@@ -69,4 +69,4 @@ class DNYWTF {
     }
 }
 
-module.exports = DNYWTF
+module.exports = Clippy
